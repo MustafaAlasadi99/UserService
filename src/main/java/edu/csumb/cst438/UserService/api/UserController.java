@@ -27,7 +27,7 @@ public class UserController {
     Manager manager;
 
 
-    @CrossOrigin(origins = "https://team-7-project.herokuapp.com/"  )
+    @CrossOrigin(origins = "https://team-7-project.herokuapp.com"  )
     @GetMapping ("/getUserData/{username}")
     @ResponseBody
    public  User RetreiveUserInfo (@PathVariable String username){
