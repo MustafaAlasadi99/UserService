@@ -1,5 +1,6 @@
 package edu.csumb.cst438.UserService.api;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.Arrays;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +26,8 @@ public class UserController {
     @Autowired
     Manager manager;
 
+
+    @CrossOrigin(origins = "https://team-7-project.herokuapp.com/"  )
     @GetMapping ("/getUserData/{username}")
     @ResponseBody
    public  User RetreiveUserInfo (@PathVariable String username){
